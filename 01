@@ -1,14 +1,11 @@
 #include <stdio.h>
-
 double integrate(double (*f)(double), double a, double b)
 {
     double area = 0;
-
     for (double x = a; x < b; x += 0.001)
     {
         area += f(x) * 0.001;
     }
-
     return area;
 }
 
